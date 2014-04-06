@@ -4,9 +4,11 @@ List of all combinations for the Android pattern lock
 
 ## Model
 
+```
 (1)(2)(3)
 (4)(5)(6)
 (7)(8)(9)
+```
 
 ## Output ([Full list](OUTPUT.txt))
 
