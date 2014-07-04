@@ -10,7 +10,28 @@ List of all combinations for the Android pattern lock
 (7)(8)(9)
 ```
 
-## Output ([Full list](OUTPUT.txt))
+## Number of possible combinations
+
+### by maximum number of connected dots
+
+ * 4 dots: 1,624 combinations
+ * up to 5 dots: 8,776 combinations
+ * up to 6 dots: 34,792 combinations
+ * up to 7 dots: 107,704 combinations
+ * up to 8 dots: 248,408 combinations
+ * up to 9 dots: 389,112 combinations
+
+### per single number of dots
+
+ * exactly 4 dots: 1,624 combinations
+ * exactly 5 dots: 7,152 combinations
+ * exactly 6 dots: 26,016 combinations
+ * exactly 7 dots: 72,912 combinations
+ * exactly 8 dots: 140,704 combinations
+ * exactly 9 dots: 140,704 combinations
+
+
+## List of possible combinations ([Full list](OUTPUT.txt))
 
 ```
 1234
