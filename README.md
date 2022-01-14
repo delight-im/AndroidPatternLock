@@ -21,7 +21,7 @@ List of all combinations for the Android pattern lock
  * up to 8 dots: 248,408 combinations
  * up to 9 dots: 389,112 combinations
 
-### per single number of dots
+### per single number of connected dots
 
  * exactly 4 dots: 1,624 combinations
  * exactly 5 dots: 7,152 combinations
@@ -29,7 +29,6 @@ List of all combinations for the Android pattern lock
  * exactly 7 dots: 72,912 combinations
  * exactly 8 dots: 140,704 combinations
  * exactly 9 dots: 140,704 combinations
-
 
 ## List of possible combinations ([Full list](OUTPUT.txt))
 
