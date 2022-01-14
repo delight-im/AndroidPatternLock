@@ -30,7 +30,7 @@ List of all combinations for the Android pattern lock
  * exactly 8 dots: 140,704 combinations
  * exactly 9 dots: 140,704 combinations
 
-## List of possible combinations ([Full list](OUTPUT.txt))
+## List of possible combinations ([Full list](combinations/all.txt))
 
 ```
 1234
@@ -52,42 +52,42 @@ List of all combinations for the Android pattern lock
 
 ```bash
 # Exactly 4 connected dots
-$ grep -E '^.{4}$' 'OUTPUT.txt'
+$ grep -E '^.{4}$' 'combinations/all.txt'
 ```
 
 #### For a minimum number of connected dots
 
 ```bash
 # At least 8 connected dots
-$ grep -E '^.{8,}$' 'OUTPUT.txt'
+$ grep -E '^.{8,}$' 'combinations/all.txt'
 ```
 
 #### For a maximum number of connected dots
 
 ```bash
 # At most 7 connected dots
-$ grep -E '^.{,7}$' 'OUTPUT.txt'
+$ grep -E '^.{,7}$' 'combinations/all.txt'
 ```
 
 #### For a range of connected dots
 
 ```bash
 # Between 5 (inclusive) and 6 (inclusive) connected dots
-$ grep -E '^.{5,6}$' 'OUTPUT.txt'
+$ grep -E '^.{5,6}$' 'combinations/all.txt'
 ```
 
 #### For a specific dot being connected
 
 ```bash
 # Dot at position (8) being connected
-$ grep -F '8' 'OUTPUT.txt'
+$ grep -F '8' 'combinations/all.txt'
 ```
 
 #### For multiple specific dots being connected
 
 ```bash
 # Dots at positions (5) and (7) being connected
-$ grep '[5,7]' 'OUTPUT.txt'
+$ grep '[5,7]' 'combinations/all.txt'
 ```
 
 ## License

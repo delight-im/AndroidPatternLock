@@ -102,7 +102,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 		AndroidPatternLock.build();
 
 		try {
-			PrintWriter writer = new PrintWriter("OUTPUT.txt", "UTF-8");
+			PrintWriter writer = new PrintWriter("all.txt", "UTF-8");
 			for (Tree<Byte> tree : AndroidPatternLock.children) {
 				writer.println(tree.toString());
 			}
@@ -111,7 +111,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 		catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		System.out.println("OUTPUT.txt created");
+		System.out.println("all.txt created");
 	}
 
 }
