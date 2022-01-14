@@ -87,7 +87,7 @@ $ grep -F '8' 'combinations/all.txt'
 
 ```bash
 # Dots at positions (5) and (7) being connected
-$ grep '[5,7]' 'combinations/all.txt'
+$ cat 'combinations/all.txt' | grep -F '5' | grep -F '7'
 ```
 
 ## License
