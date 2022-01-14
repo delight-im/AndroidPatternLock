@@ -48,35 +48,35 @@ List of all combinations for the Android pattern lock
 
 ### Filtering
 
-#### For an exact number of connected dots
+#### For an exact number of connected dots ([Filtered lists](combinations/Exact number of connected dots/))
 
 ```bash
 # Exactly 4 connected dots
 $ grep -E '^.{4}$' 'combinations/all.txt'
 ```
 
-#### For a minimum number of connected dots
+#### For a minimum number of connected dots ([Filtered lists](combinations/Minimum number of connected dots/))
 
 ```bash
 # At least 8 connected dots
 $ grep -E '^.{8,}$' 'combinations/all.txt'
 ```
 
-#### For a maximum number of connected dots
+#### For a maximum number of connected dots ([Filtered lists](combinations/Maximum number of connected dots/))
 
 ```bash
 # At most 7 connected dots
 $ grep -E '^.{,7}$' 'combinations/all.txt'
 ```
 
-#### For a range of connected dots
+#### For a range of connected dots ([Filtered lists](combinations/Range of connected dots/))
 
 ```bash
 # Between 5 (inclusive) and 6 (inclusive) connected dots
 $ grep -E '^.{5,6}$' 'combinations/all.txt'
 ```
 
-#### For a specific dot being connected
+#### For a specific dot being connected ([Filtered lists](combinations/Specific dot being connected/))
 
 ```bash
 # Dot at position (8) being connected
