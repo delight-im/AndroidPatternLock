@@ -1,12 +1,12 @@
 /*
  * Copyright (c) delight.im <info@delight.im>
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -23,15 +23,15 @@ public class AndroidPatternLock extends Tree<Byte> {
 	public static final byte LENGTH_MAX = 9;
 	public static final byte NUMBER_MIN = 1;
 	public static final byte NUMBER_MAX = 9;
-	
+
 	public AndroidPatternLock(Byte b, AndroidPatternLock t) {
 		super(b, t);
 	}
-	
+
 	private boolean isMovePossible(byte to) {
 		return !hasAncestor(to) && (getNumberGroup(value) != getNumberGroup(to) || hasAncestor(getMiddle(value, to)));
 	}
-	
+
 	private Byte getMiddle(byte from, byte to) {
 		if (from != to && getNumberGroup(from) == getNumberGroup(to)) {
 			return (byte) ((from+to) / 2);
@@ -40,7 +40,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 			return null;
 		}
 	}
-	
+
 	private static byte getNumberGroup(byte from) {
 		if (from == 0) {
 			return 0;
@@ -58,7 +58,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 			return 4;
 		}
 	}
-	
+
 	public void build() {
 		for (byte to = NUMBER_MIN; to <= NUMBER_MAX; to++) {
 			if (isMovePossible(to)) {
@@ -69,7 +69,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 			}
 		}
 	}
-	
+
 	public String toString(boolean pathOnly) {
 		StringBuilder out = new StringBuilder();
 		if (level >= LENGTH_MIN || pathOnly) {
@@ -80,7 +80,7 @@ public class AndroidPatternLock extends Tree<Byte> {
 				out.append(value.toString());
 			}
 		}
-		
+
 		if (!pathOnly && children.size() > 0) {
 			for (Tree<Byte> child : children) {
 				if (out.length() > 0) {
@@ -91,16 +91,16 @@ public class AndroidPatternLock extends Tree<Byte> {
 		}
 		return out.toString();
 	}
-	
+
 	@Override
 	public String toString() {
 		return toString(false);
 	}
-	
+
 	public static void main(String[] args) {
 		AndroidPatternLock AndroidPatternLock = new AndroidPatternLock((byte) 0, null);
 		AndroidPatternLock.build();
-		
+
 		try {
 			PrintWriter writer = new PrintWriter("OUTPUT.txt", "UTF-8");
 			for (Tree<Byte> tree : AndroidPatternLock.children) {
