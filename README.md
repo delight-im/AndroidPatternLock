@@ -30,6 +30,13 @@ List of all combinations for the Android pattern lock
  * exactly 8 dots: 140,704 combinations
  * exactly 9 dots: 140,704 combinations
 
+### per distance to other dots
+ *  exactly 4 connected dots distance 1: 496
+ *  exactly 5 connected dots distance 1: 1208
+ *  exactly 6 connected dots distance 1: 2240
+ *  exactly 7 connected dots distance 1: 2984
+ *  exactly 8 connected dots distance 1: 2384
+
 ## List of possible combinations ([Full list](combinations/all.txt))
 
 ```
@@ -89,6 +96,14 @@ $ grep -F '8' 'combinations/all.txt'
 # Dots at positions (5) and (7) being connected
 $ cat 'combinations/all.txt' | grep -F '5' | grep -F '7'
 ```
+
+#### Dots only connected by distance of one
+```
+# needs the silver searcher installed
+
+ag --only-matching "^((1(?=(2|4|5|$)))|2(?=(1|4|5|6|3|$))|3(?=(2|5|6|$))|4(?=(1|2|5|7|8|$))|5(?=(1|2|3|4|6|7|8|9|$))|6(?=(2|3|5|8|9|$))|7(?=(4|5|8|$))|8(?=(7|4|5|6|9|$))|9(?=(8|5|6|$))){8}$" combinations/all.txt > combinations/Distance/exactly-8-connected-dots-distance-1.txt
+```
+
 
 ## License
 
