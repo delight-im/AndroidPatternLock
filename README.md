@@ -101,7 +101,7 @@ $ cat 'combinations/all.txt' | grep -F '5' | grep -F '7'
 ```
 
 #### Dots only connected by distance of one
-thanks to (xerg0n)[https://github.com/xerg0n]
+thanks to [xerg0n](https://github.com/xerg0n)
 ```bash
 # needs the silver searcher installed
 
